@@ -1,0 +1,48 @@
+<div class="container-fluid">
+     
+
+
+      <form id="add-form" class="left-input mx-auto">
+        <input type="text" placeholder="Let's Make A Burger!" id="ca" name="burgers_name" class="ml-3"/>
+        <button type="submit" class="addBurgers btn btn-success ml-4" >Add Burgers</button>
+       
+       </form>
+       <div class="spacer"></div>
+        
+       <div class="row">
+        <div class="col-6">
+         </div>
+       </div>   
+
+     <div class="row">
+     <div class="box-1">
+      <div class="form-group">
+          <h5 style="text-align: center; color: white;">Added Burgers</h5>
+          <input type="text" name="burgers_name" style="margin-left: 140px;">
+           <ul>
+			  {{#each burgers}}
+			    {{#unless devoured}}
+			      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+        </div>
+      
+        </div>
+      <div class="box-2">
+        <div class="form-group">
+        <h5 style="text-align: center; color: white;">Devoured Burgers</h5>
+         {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block sleep=false}}
+    {{/if}}
+  {{/each}}
+        <input type="text" id="ca" name="burgers_name">
+      </div>
+    
+    </div>
+      
+      
+     </div>
+    </div>
+   </div>
+   
