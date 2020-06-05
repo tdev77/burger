@@ -18,11 +18,11 @@
      <div class="box-1">
       <div class="form-group">
           <h5 style="text-align: center; color: white;">Added Burgers</h5>
-          <input type="text" name="burgers_name" style="margin-left: 140px;">
-           <ul>
+         
+          
 			  {{#each burgers}}
 			    {{#unless devoured}}
-			      {{> burgers/burger-block devoured=true}}
+			      {{> burgers/burger-block devoured=1}}
     {{/unless}}
   {{/each}}
         </div>
@@ -33,10 +33,10 @@
         <h5 style="text-align: center; color: white;">Devoured Burgers</h5>
          {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-block sleep=false}}
+      {{> burgers/burger-block devoured=0}}
     {{/if}}
   {{/each}}
-        <input type="text" id="ca" name="burgers_name">
+        
       </div>
     
     </div>

@@ -26,7 +26,7 @@ $(document).ready(function() {
   
       var newBurgers = {
         name: $("#ca").val().trim(),
-        eaten: false
+      devoured: 0
       };
   
       // Send the POST request.
@@ -42,12 +42,27 @@ $(document).ready(function() {
       );
     });
   
-    $(".box-2").on("click", function(event) {
+    $("#delete").on("click", function(event) {
       var id = $(this).data("id");
   
       // Send the DELETE request.
       $.ajax("/api/burgers/" + id, {
         type: "DELETE"
+      }).then(
+        function() {
+          console.log("deleted burgers", id);
+          // Reload the page to get the updated list
+          location.reload();
+        }
+      );
+    });
+    $("#devour").on("click", function(event) {
+      var id = $(this).data("id");
+  
+      // Send the DELETE request.
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+      data: {}
       }).then(
         function() {
           console.log("deleted burgers", id);

@@ -1,9 +1,13 @@
-<li>
-	{{name}}
 
-	<button class="burgers-devored" data-id="{{id}}" data-burgersDevoured="{{sleep}}">
-		{{#if devoured}}DEVOURED!{{else}}ADD BURGER!{{/if}}
-	</button>
-
-	<button class="delete-burgers" data-id="{{this.id}}">DELETE!</button>
-</li>
+  <div class="flex row align-center justify-content">
+        {{#if devoured}}
+         {{/if}}
+         <p>{{ this.burgers_name }}</p>
+        <button class="burgers-devoured" id="devour" data-id="{{ this.id }}" data-burgersDevoured="{{ this.devoured }}">
+            DEVOUR!
+        </button>
+   
+   
+    <button class="delete-burgers" id="delete" data-id="{{ this.id }}">DELETE!</button>
+    
+</div>

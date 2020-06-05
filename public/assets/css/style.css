@@ -3,6 +3,35 @@
     padding: 0;
 
 }
+p {
+color: #26f01f;
+font-weight: bold;
+
+}
+.flex {
+display: flex;
+
+}
+
+.row {
+flex-direction: row;
+
+}
+
+.column {
+flex-direction: column;
+
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-content {
+justify-content: space-evenly;
+}
+
+
 
 .container-fluid {
     background: url("/assets/images/EAT-DA-Burger.png");
@@ -54,12 +83,13 @@ width: 100%;
 
 .box-2 {
     width: 450px;
-    height: 250px;
+    min-height: 250px;
     background-color: black;
     margin:  10px auto;
     float: right;
     position: relative;
     opacity: 0.9;
+    height: auto;
 
     }
 
