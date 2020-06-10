@@ -9,13 +9,13 @@ var connection;
 // });
 
 // Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected as id " + connection.threadId);
-});
+// connection.connect(function(err) {
+//   if (err) {
+//     console.error("error connecting: " + err.stack);
+//     return;
+//   }
+//   console.log("connected as id " + connection.threadId);
+// });
 
 if (process.env.JAWSDB_URL) {
 connection = mysql.createConnecton(process.env.JAWSDB_URL);
@@ -23,7 +23,7 @@ connection = mysql.createConnecton(process.env.JAWSDB_URL);
   connection = mysql.createConnection( {
   host: "localhost",
   user: "app",
-  password: "original1",
+  password: "original1!",
   database: "burgers_db"
 });
 };
